@@ -1,5 +1,9 @@
+import { configureStore } from "@reduxjs/toolkit";
+import bookmarksReducer from "./bookmarkSlice";
+
 export const store = configureStore({
-    reducer: {
-        bookmarks: "temp"
+	// localStorage.setItem("items", JSON.stringify(state.items))
+	reducer: {
+		bookmarks: bookmarksReducer,
 	},
 });
