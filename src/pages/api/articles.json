@@ -1,0 +1,312 @@
+[
+    {
+        "article_id": "1",
+        "title": "Global Conference on Climate Change Convenes in Geneva",
+        "link": null,
+        "keywords": [
+            "climate change",
+            "global conference",
+            "emissions targets"
+        ],
+        "creator": "Global Times Network",
+        "video_url": null,
+        "description": "World leaders discuss urgent climate measures in Geneva.",
+        "content": "Leaders from around the world gather in Geneva to discuss urgent measures against climate change, aiming to set new global emissions targets.",
+        "pubDate": "2024-02-20",
+        "image_url": null,
+        "source_id": "global-times-network",
+        "source_url": null,
+        "source_icon": null,
+        "source_priority": null,
+        "country": [
+            "international"
+        ],
+        "category": [
+            "world"
+        ],
+        "language": "english",
+        "ai_tag": null,
+        "sentiment": null,
+        "sentiment_stats": null,
+        "ai_region": null
+    },
+    {
+        "article_id": "2",
+        "title": "New Peace Agreement Signed in Middle East",
+        "link": null,
+        "keywords": [
+            "peace agreement",
+            "Middle East",
+            "cooperation"
+        ],
+        "creator": "Peace News Today",
+        "video_url": null,
+        "description": "Groundbreaking peace agreement signed in the Middle East.",
+        "content": "After months of negotiations, a groundbreaking peace agreement has been signed between neighboring countries in the Middle East, marking a new era of cooperation.",
+        "pubDate": "2024-02-19",
+        "image_url": null,
+        "source_id": "peace-news-today",
+        "source_url": null,
+        "source_icon": null,
+        "source_priority": null,
+        "country": [
+            "international"
+        ],
+        "category": [
+            "world"
+        ],
+        "language": "english",
+        "ai_tag": null,
+        "sentiment": null,
+        "sentiment_stats": null,
+        "ai_region": null
+    },
+    {
+        "article_id": "3",
+        "title": "Historic Win at the International Marathon",
+        "link": null,
+        "keywords": [
+            "International Marathon",
+            "world record",
+            "Alex Johnson"
+        ],
+        "creator": "Sports World Daily",
+        "video_url": null,
+        "description": "Alex Johnson sets a new world record at the International Marathon.",
+        "content": "Runner Alex Johnson sets a new world record at the International Marathon, finishing in an unprecedented time.",
+        "pubDate": "2024-02-18",
+        "image_url": null,
+        "source_id": "sports-world-daily",
+        "source_url": null,
+        "source_icon": null,
+        "source_priority": null,
+        "country": [
+            "international"
+        ],
+        "category": [
+            "sports"
+        ],
+        "language": "english",
+        "ai_tag": null,
+        "sentiment": null,
+        "sentiment_stats": null,
+        "ai_region": null
+    },
+    {
+        "article_id": "4",
+        "title": "National Team Wins the World Cup in Stunning Upset",
+        "link": null,
+        "keywords": [
+            "World Cup",
+            "national team",
+            "upset victory"
+        ],
+        "creator": "Global Sports News",
+        "video_url": null,
+        "description": "National team clinches World Cup victory in stunning upset.",
+        "content": "In a surprising turn of events, the national team claims victory at the World Cup, defeating the favorites in a thrilling match.",
+        "pubDate": "2024-02-17",
+        "image_url": null,
+        "source_id": "global-sports-news",
+        "source_url": null,
+        "source_icon": null,
+        "source_priority": null,
+        "country": [
+            "international"
+        ],
+        "category": [
+            "sports"
+        ],
+        "language": "english",
+        "ai_tag": null,
+        "sentiment": null,
+        "sentiment_stats": null,
+        "ai_region": null
+    },
+    {
+        "article_id": "5",
+        "title": "Blockbuster Movie Shatters Box Office Records",
+        "link": null,
+        "keywords": [
+            "blockbuster movie",
+            "box office records",
+            "highest-grossing film"
+        ],
+        "creator": "Entertainment Weekly",
+        "video_url": null,
+        "description": "New blockbuster becomes the highest-grossing film of all time.",
+        "content": "The latest blockbuster movie sets new records, becoming the highest-grossing film of all time in its opening weekend.",
+        "pubDate": "2024-02-16",
+        "image_url": null,
+        "source_id": "entertainment-weekly",
+        "source_url": null,
+        "source_icon": null,
+        "source_priority": null,
+        "country": [
+            "international"
+        ],
+        "category": [
+            "entertainment"
+        ],
+        "language": "english",
+        "ai_tag": null,
+        "sentiment": null,
+        "sentiment_stats": null,
+        "ai_region": null
+    },
+    {
+        "article_id": "6",
+        "title": "Famous Musician Announces Surprise World Tour",
+        "link": null,
+        "keywords": [
+            "musician",
+            "world tour",
+            "surprise announcement"
+        ],
+        "creator": "Music News Daily",
+        "video_url": null,
+        "description": "World-renowned musician announces a surprise global tour.",
+        "content": "In a surprising move, a world-renowned musician announces a last-minute global tour, sending fans into a frenzy.",
+        "pubDate": "2024-02-15",
+        "image_url": null,
+        "source_id": "music-news-daily",
+        "source_url": null,
+        "source_icon": null,
+        "source_priority": null,
+        "country": [
+            "international"
+        ],
+        "category": [
+            "entertainment"
+        ],
+        "language": "english",
+        "ai_tag": null,
+        "sentiment": null,
+        "sentiment_stats": null,
+        "ai_region": null
+    },
+    {
+        "article_id": "7",
+        "title": "Innovative Urban Farming Project Launched in Major City",
+        "link": null,
+        "keywords": [
+            "urban farming",
+            "food production",
+            "carbon footprint"
+        ],
+        "creator": "Eco Innovations Journal",
+        "video_url": null,
+        "description": "New urban farming initiative promises fresh produce with minimal carbon footprint.",
+        "content": "A new urban farming initiative aims to revolutionize food production in cities, promising fresh produce with a minimal carbon footprint.",
+        "pubDate": "2024-02-14",
+        "image_url": null,
+        "source_id": "eco-innovations-journal",
+        "source_url": null,
+        "source_icon": null,
+        "source_priority": null,
+        "country": [
+            "international"
+        ],
+        "category": [
+            "world"
+        ],
+        "language": "english",
+        "ai_tag": null,
+        "sentiment": null,
+        "sentiment_stats": null,
+        "ai_region": null
+    },
+    {
+        "article_id": "8",
+        "title": "Teen Prodigy Wins Gold at the Olympics",
+        "link": null,
+        "keywords": [
+            "Olympics",
+            "gold medal",
+            "teen prodigy"
+        ],
+        "creator": "Olympic News Network",
+        "video_url": null,
+        "description": "16-year-old gymnastics prodigy wins gold at the Olympics.",
+        "content": "A 16-year-old prodigy stuns the world by winning gold in gymnastics at the Olympics, becoming one of the youngest champions in history.",
+        "pubDate": "2024-02-13",
+        "image_url": null,
+        "source_id": "olympic-news-network",
+        "source_url": null,
+        "source_icon": null,
+        "source_priority": null,
+        "country": [
+            "international"
+        ],
+        "category": [
+            "sports"
+        ],
+        "language": "english",
+        "ai_tag": null,
+        "sentiment": null,
+        "sentiment_stats": null,
+        "ai_region": null
+    },
+    {
+        "article_id": "9",
+        "title": "Virtual Reality Concert Draws Millions of Viewers Worldwide",
+        "link": null,
+        "keywords": [
+            "virtual reality",
+            "concert",
+            "live performance"
+        ],
+        "creator": "Future Entertainment News",
+        "video_url": null,
+        "description": "Virtual reality concert by top artist sets new precedent for live performances.",
+        "content": "A groundbreaking virtual reality concert by a top artist draws millions of viewers, setting a new precedent for live performances.",
+        "pubDate": "2024-02-12",
+        "image_url": null,
+        "source_id": "future-entertainment-news",
+        "source_url": null,
+        "source_icon": null,
+        "source_priority": null,
+        "country": [
+            "international"
+        ],
+        "category": [
+            "entertainment"
+        ],
+        "language": "english",
+        "ai_tag": null,
+        "sentiment": null,
+        "sentiment_stats": null,
+        "ai_region": null
+    },
+    {
+        "article_id": "10",
+        "title": "Breakthrough in Renewable Energy Technology Announced",
+        "link": null,
+        "keywords": [
+            "renewable energy",
+            "solar panels",
+            "technology breakthrough"
+        ],
+        "creator": "Innovation Times",
+        "video_url": null,
+        "description": "New solar panel technology could change the future of renewable energy.",
+        "content": "Scientists unveil a new technology that significantly improves the efficiency of solar panels, potentially changing the future of renewable energy.",
+        "pubDate": "2024-02-11",
+        "image_url": null,
+        "source_id": "innovation-times",
+        "source_url": null,
+        "source_icon": null,
+        "source_priority": null,
+        "country": [
+            "international"
+        ],
+        "category": [
+            "world"
+        ],
+        "language": "english",
+        "ai_tag": null,
+        "sentiment": null,
+        "sentiment_stats": null,
+        "ai_region": null
+    }
+]
