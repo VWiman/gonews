@@ -8,12 +8,11 @@ export const bookmarksSlice = createSlice({
 		toggleBookmark: (state, action) => {
 			// Find the index of the payload if it exists in the bookmarks list, else return -1
 			const index = state.list.findIndex((article) => article.article_id === action.payload.article_id);
-
+	
 			if (index !== -1) {
 				// If the article is found, remove from bookmarks
 				state.list.splice(index, 1);
 				console.log("Bookmark removed.");
-				console.log(state.list);
 			} else {
 				// If the article is not found, add to bookmarks
 				state.list.push(action.payload);
