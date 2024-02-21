@@ -44,12 +44,12 @@ export async function getStaticProps() {
 		const refreshTime = 60 * 10;
 		return {
 			props: { news },
+			revalidate: refreshTime,
 		};
 	} catch (error) {
 		console.error("Error fetching news:", error);
 		return {
 			props: { news: [] },
-			revalidate: refreshTime,
 		};
 	}
 }
