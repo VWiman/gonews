@@ -27,7 +27,7 @@ const Home = ({ news }) => {
         <hr />
         <Link href="/">Home</Link>
         <hr />
-        <Link href="/world">World</Link>
+        <Link href="/sports">Sports</Link>
       </div>
       <h1>Huvudnyheter</h1>
       <ul>
@@ -52,7 +52,7 @@ const Home = ({ news }) => {
 // funktion för att hämta nyhetsdata vid build samt var 10 min.
 export async function getStaticProps() {
   const apiKey = process.env.API_KEY;
-  const options = `category=sports&size=10&language=en`;
+  const options = `category=world&size=10&language=en`;
 
   try {
     const news = await fetchNews(apiKey, options);

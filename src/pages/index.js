@@ -25,7 +25,9 @@ const Home = ({ news }) => {
         <p>Temp navbar</p>
         <Link href="/bookmarks">Bokmärken</Link>
         <hr />
-		<Link href="/sports">Sports</Link>
+        <Link href="/sports">Sports</Link>
+        <hr />
+        <Link href="/world">World</Link>
       </div>
       <h1>Huvudnyheter</h1>
       <ul>
