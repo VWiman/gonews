@@ -24,9 +24,9 @@ const Home = ({ news }) => {
         {news.map((article) => (
           <li key={article.article_id}>
             <h2 className="text-2xl">{article.title}</h2>
-            <p className="text-lg">{article.description.slice(0, 500)}</p>
+            <p className="text-lg">{article.description}</p>
             <button onClick={() => handleBookmarkToggle(article)}>
-              {bookmarks.some(
+              {bookmarks.list.some(
                 (bookmark) => bookmark.article_id === article.article_id
               )
                 ? "Ta bort bokmärke"
