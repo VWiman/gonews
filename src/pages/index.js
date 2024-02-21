@@ -1,25 +1,10 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { toggleBookmark } from "../store/bookmarkSlice";
 
-const Home = () => {
-  const [news, setNews] = useState([]);
+const Home = ({ news }) => {
   const bookmarks = useSelector((state) => state.bookmarks);
   const dispatch = useDispatch();
-
-  useEffect(() => {
-    const fetchNews = async () => {
-      try {
-        const response = await fetch("./api/articles.json");
-        const data = await response.json();
-        setNews(data);
-      } catch (error) {
-        console.error("Error fetching news:", error);
-      }
-    };
-
-    fetchNews();
-  }, []);
 
   const handleBookmarkToggle = (article) => {
     dispatch(toggleBookmark(article));
@@ -44,6 +29,22 @@ const Home = () => {
       </ul>
     </div>
   );
+};
+
+export const getServerSideProps = async () => {
+  try {
+    const response = await fetch("https://api.example.com/news");
+    const news = await response.json();
+
+    return {
+      props: { news },
+    };
+  } catch (error) {
+    console.error("Error fetching news:", error);
+    return {
+      props: { news: [] },
+    };
+  }
 };
 
 export default Home;
