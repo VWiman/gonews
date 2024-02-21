@@ -1,6 +1,7 @@
 import React from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { toggleBookmark } from "../store/bookmarkSlice";
+import fetchNews from "@/utils/fetchNews";
 
 // definiera en funktionell komponent Home, som tar emot nyhetsdata som en prop
 const Home = ({ news }) => {
@@ -35,7 +36,7 @@ const Home = ({ news }) => {
 	);
 };
 
-// funktion för att hämta nyhetsdata från API:et varje gång sidan renderas på servern.
+// funktion för att hämta nyhetsdata vid build samt var 10 min.
 export async function getStaticProps() {
 	const apiKey = process.env.API_KEY;
 	const options = `size=10&language=en`;
