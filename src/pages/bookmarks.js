@@ -12,17 +12,6 @@ const Bookmarks = () => {
 	const handleBookmarkToggle = (article) => {
 		dispatch(toggleBookmark(article));
 	};
-	
-	function displayLink(article, category) {
-		const cat = category.toString()
-		if (cat === "sports") {
-			return <Link href={`/sportsarticle/${article.article_id}`}>Läs mer</Link>;
-		} else if (cat === "world") {
-			return <Link href={`/worldarticle/${article.article_id}`}>Läs mer</Link>;
-		} else {
-			return <Link href={`/article/${article.article_id}`}>Läs mer</Link>;
-		}
-	}
     
 	return (
 		<div>
@@ -37,6 +26,7 @@ const Bookmarks = () => {
 			<h2>Bookmarks</h2>
 
 			<ul>
+				{/* // Add accordian and show description only on click */}
 				{bookmarks.list.map((article) => (
 					<li key={article.article_id}>
 						<h2 className="text-2xl">{article.title}</h2>
@@ -46,7 +36,6 @@ const Bookmarks = () => {
 								? "Ta bort bokmärke"
 								: "Lägg till bokmärke"}
 						</button>
-						{displayLink(article, article.category)}
 					</li>
 				))}
 			</ul>
