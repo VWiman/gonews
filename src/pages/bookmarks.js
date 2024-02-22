@@ -2,45 +2,45 @@ import { toggleBookmark } from "@/store/bookmarkSlice";
 import Link from "next/link";
 import { useDispatch, useSelector } from "react-redux";
 
-
-
 const Bookmarks = () => {
-    const bookmarks = useSelector((state) => state.bookmarks);
-    
-	const dispatch = useDispatch();
+  const bookmarks = useSelector((state) => state.bookmarks);
 
-	const handleBookmarkToggle = (article) => {
-		dispatch(toggleBookmark(article));
-	};
-    
-	return (
-		<div>
-			<div className=" bg-blue-200">
-				<p>Temp navbar</p>
-				<Link href="/">Home</Link>
-				<hr />
-				<Link href="/sports">Sports</Link>
-				<hr />
-				<Link href="/world">World</Link>
-			</div>
-			<h2>Bookmarks</h2>
+  const dispatch = useDispatch();
 
-			<ul>
-				{/* // Add accordian and show description only on click */}
-				{bookmarks.list.map((article) => (
-					<li key={article.article_id}>
-						<h2 className="text-2xl">{article.title}</h2>
-						<p className="text-lg">{article.description}</p>
-						<button onClick={() => handleBookmarkToggle(article)}>
-							{bookmarks.list.some((bookmark) => bookmark.article_id === article.article_id)
-								? "Ta bort bokmärke"
-								: "Lägg till bokmärke"}
-						</button>
-					</li>
-				))}
-			</ul>
-		</div>
-	);
-}
+  const handleBookmarkToggle = (article) => {
+    dispatch(toggleBookmark(article));
+  };
 
-export default Bookmarks
+  return (
+    <div>
+      <div className=" bg-blue-200">
+        <p>Temp navbar</p>
+        <Link href="/">Home</Link>
+        <hr />
+        <Link href="/sports">Sports</Link>
+        <hr />
+        <Link href="/world">World</Link>
+      </div>
+      <h2>Bookmarks</h2>
+
+      <ul>
+        {/* // Add accordian and show description only on click */}
+        {bookmarks.list.map((article) => (
+          <li key={article.article_id}>
+            <h2 className="text-2xl">{article.title}</h2>
+            <p className="text-lg">{article.description}</p>
+            <button onClick={() => handleBookmarkToggle(article)}>
+              {bookmarks.list.some(
+                (bookmark) => bookmark.article_id === article.article_id
+              )
+                ? "Ta bort bokmärke"
+                : "Lägg till bokmärke"}
+            </button>
+          </li>
+        ))}
+      </ul>
+    </div>
+  );
+};
+
+export default Bookmarks;
