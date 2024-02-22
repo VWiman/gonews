@@ -1,8 +1,12 @@
-export async function getStaticPaths() {
-	const res = await fetch(`https://newsdata.io/api/1/news?apikey=${DIN_API_NYCKEL}&q=pizza`);
-	const data = await res.json();
+import fetchNews from "@/utils/fetchNews";
+import Link from "next/link";
 
-	const articles = data.results;
+
+export async function getStaticPaths() {
+	const apiKey = process.env.API_KEY;
+	const options = `size=10&language=en`;
+
+	const articles = await fetchNews(apiKey, options);
 
 	const paths = articles.map((article) => ({
 		params: { id: article.article_id },
@@ -12,10 +16,9 @@ export async function getStaticPaths() {
 }
 
 export async function getStaticProps({ params }) {
-	const res = await fetch(`https://newsdata.io/api/1/news?apikey=${DIN_API_NYCKEL}&q=pizza`);
-	const data = await res.json();
-
-	const articles = data.results;
+	const apiKey = process.env.API_KEY;
+	const options = `size=10&language=en`;
+	const articles = await fetchNews(apiKey, options);
 
 	const article = articles.find((article) => article.article_id == params.id);
 
@@ -29,10 +32,19 @@ export async function getStaticProps({ params }) {
 export default function Article({ article }) {
 	return (
 		<div>
+			<div className=" bg-blue-200">
+				<p>Temp navbar</p>
+				<Link href="/bookmarks">Bokmärken</Link>
+				<hr />
+				<Link href="/sports">Sports</Link>
+				<hr />
+				<Link href="/world">World</Link>
+			</div>
 			{article && (
 				<>
-					<h2>{article.title}</h2>
 					<img src={article.image_url} />
+					<h2>{article.title}</h2>
+					<p>{article.description}</p>
 				</>
 			)}
 		</div>

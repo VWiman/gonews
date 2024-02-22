@@ -19,34 +19,33 @@ const Home = ({ news }) => {
 
   // rendera nyhetsartiklarna
   return (
-    <div>
-      {" "}
-      <div className=" bg-blue-200">
-        <p>Temp navbar</p>
-        <Link href="/bookmarks">Bokmärken</Link>
-        <hr />
-        <Link href="/">Home</Link>
-        <hr />
-        <Link href="/sports">Sports</Link>
-      </div>
-      <h1>Huvudnyheter</h1>
-      <ul>
-        {news.map((article) => (
-          <li key={article.article_id}>
-            <h2 className="text-2xl">{article.title}</h2>
-            <p className="text-lg">{article.description}</p>
-            <button onClick={() => handleBookmarkToggle(article)}>
-              {bookmarks.list.some(
-                (bookmark) => bookmark.article_id === article.article_id
-              )
-                ? "Ta bort bokmärke"
-                : "Lägg till bokmärke"}
-            </button>
-          </li>
-        ))}
-      </ul>
-    </div>
-  );
+		<div>
+			{" "}
+			<div className=" bg-blue-200">
+				<p>Temp navbar</p>
+				<Link href="/bookmarks">Bokmärken</Link>
+				<hr />
+				<Link href="/">Home</Link>
+				<hr />
+				<Link href="/sports">Sports</Link>
+			</div>
+			<h1>Huvudnyheter</h1>
+			<ul>
+				{news.map((article) => (
+					<li key={article.article_id}>
+						<h2 className="text-2xl">{article.title}</h2>
+						<p className="text-lg">{article.description}</p>
+						<button onClick={() => handleBookmarkToggle(article)}>
+							{bookmarks.list.some((bookmark) => bookmark.article_id === article.article_id)
+								? "Ta bort bokmärke"
+								: "Lägg till bokmärke"}
+						</button>
+						<Link href={`/article/${article.article_id}`}>Läs mer</Link>
+					</li>
+				))}
+			</ul>
+		</div>
+	);
 };
 
 // funktion för att hämta nyhetsdata vid build samt var 10 min.
@@ -59,7 +58,6 @@ export async function getStaticProps() {
 
     return {
       props: { news },
-      revalidate: 10 * 60,
     };
   } catch (error) {
     console.error("Error fetching news:", error);
