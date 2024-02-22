@@ -48,7 +48,7 @@ const Home = ({ news }) => {
 	);
 };
 
-// funktion för att hämta nyhetsdata vid build samt var 10 min.
+// funktion för att hämta nyhetsdata vid build.
 export async function getStaticProps() {
   const apiKey = process.env.API_KEY;
   const options = `category=world&size=10&language=en`;
