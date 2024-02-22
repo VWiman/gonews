@@ -11,13 +11,28 @@ const Bookmarks = () => {
 
 	const handleBookmarkToggle = (article) => {
 		dispatch(toggleBookmark(article));
-    };
+	};
+	
+	function displayLink(article, category) {
+		const cat = category.toString()
+		if (cat === "sports") {
+			return <Link href={`/sportsarticle/${article.article_id}`}>Läs mer</Link>;
+		} else if (cat === "world") {
+			return <Link href={`/worldarticle/${article.article_id}`}>Läs mer</Link>;
+		} else {
+			return <Link href={`/article/${article.article_id}`}>Läs mer</Link>;
+		}
+	}
     
 	return (
 		<div>
 			<div className=" bg-blue-200">
 				<p>Temp navbar</p>
 				<Link href="/">Home</Link>
+				<hr />
+				<Link href="/sports">Sports</Link>
+				<hr />
+				<Link href="/world">World</Link>
 			</div>
 			<h2>Bookmarks</h2>
 
@@ -31,6 +46,7 @@ const Bookmarks = () => {
 								? "Ta bort bokmärke"
 								: "Lägg till bokmärke"}
 						</button>
+						{displayLink(article, article.category)}
 					</li>
 				))}
 			</ul>

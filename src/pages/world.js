@@ -40,7 +40,7 @@ const Home = ({ news }) => {
 								? "Ta bort bokmärke"
 								: "Lägg till bokmärke"}
 						</button>
-						<Link href={`/article/${article.article_id}`}>Läs mer</Link>
+						<Link href={`/${article.category}article/${article.article_id}`}>Läs mer</Link>
 					</li>
 				))}
 			</ul>

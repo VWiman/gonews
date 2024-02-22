@@ -1,10 +1,9 @@
 import fetchNews from "@/utils/fetchNews";
 import Link from "next/link";
 
-
 export async function getStaticPaths() {
 	const apiKey = process.env.API_KEY;
-	const options = `size=10&language=en`;
+	const options = `category=sports&size=10&language=en`;
 
 	const articles = await fetchNews(apiKey, options);
 
@@ -17,7 +16,7 @@ export async function getStaticPaths() {
 
 export async function getStaticProps({ params }) {
 	const apiKey = process.env.API_KEY;
-	const options = `size=10&language=en`;
+	const options = `category=sports&size=10&language=en`;
 	const articles = await fetchNews(apiKey, options);
 
 	const article = articles.find((article) => article.article_id == params.id);

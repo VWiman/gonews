@@ -51,7 +51,7 @@ const Home = ({ news }) => {
 // funktion för att hämta nyhetsdata vid build.
 export async function getStaticProps() {
 	const apiKey = process.env.API_KEY;
-	const options = `size=10&language=en`;
+	const options = `language=en`;
 
 	try {
 		const news = await fetchNews(apiKey, options);
