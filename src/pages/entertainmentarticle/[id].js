@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export async function getStaticPaths() {
 	const apiKey = process.env.API_KEY;
-	const options = `category=world&size=10&language=en`;
+	const options = `category=entertainment&size=10&language=en`;
 
 	const articles = await fetchNews(apiKey, options);
 
@@ -16,7 +16,7 @@ export async function getStaticPaths() {
 
 export async function getStaticProps({ params }) {
 	const apiKey = process.env.API_KEY;
-	const options = `category=world&size=10&language=en`;
+	const options = `category=entertainment&size=10&language=en`;
 	const articles = await fetchNews(apiKey, options);
 
 	const article = articles.find((article) => article.article_id == params.id);
@@ -39,7 +39,7 @@ export default function Article({ article }) {
 				<hr />
 				<Link href="/sports">Sports</Link>
 				<hr />
-				<Link href="/world">World</Link>
+				<Link href="/entertainment">entertainment</Link>
 			</div>
 			{article && (
 				<>

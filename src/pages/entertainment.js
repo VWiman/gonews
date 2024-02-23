@@ -16,7 +16,7 @@ const Home = ({ news }) => {
   const handleBookmarkToggle = (article) => {
     dispatch(toggleBookmark(article));
   };
-  const filteredNews = news.filter((item) => item.category.includes("world"));
+  const filteredNews = news.filter((item) => item.category.includes("entertainment"));
   // rendera nyhetsartiklarna
   return (
     <div>
@@ -55,7 +55,7 @@ const Home = ({ news }) => {
 // funktion för att hämta nyhetsdata vid build.
 export async function getStaticProps() {
   const apiKey = process.env.API_KEY;
-  const options = `category=world&size=10&language=en`;
+  const options = `category=entertainment&size=10&language=en`;
 
   try {
     const news = await fetchNews(apiKey, options);

@@ -39,7 +39,7 @@ export default function Article({ article }) {
 				<hr />
 				<Link href="/sports">Sports</Link>
 				<hr />
-				<Link href="/world">World</Link>
+				<Link href="/entertainment">Entertainment</Link>
 			</div>
 			{article && (
 				<>

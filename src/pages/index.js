@@ -27,7 +27,7 @@ const Home = ({ news }) => {
         <hr />
         <Link href="/sports">Sports</Link>
         <hr />
-        <Link href="/world">World</Link>
+        <Link href="/entertainment">Entertainment</Link>
       </div>
       <h1>Huvudnyheter</h1>
       <ul>

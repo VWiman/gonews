@@ -30,24 +30,24 @@ export async function getStaticProps({ params }) {
 
 export default function Article({ article }) {
   return (
-    <div>
-      <div className=" bg-blue-200">
-        <p>Temp navbar</p>
-        <Link href="/bookmarks">Bokmärken</Link>
-        <hr />
-        <Link href="/">Home</Link>
-        <hr />
-        <Link href="/sports">Sports</Link>
-        <hr />
-        <Link href="/world">World</Link>
-      </div>
-      {article && (
-        <>
-          <img src={article.image_url} />
-          <h2>{article.title}</h2>
-          <p>{article.description}</p>
-        </>
-      )}
-    </div>
-  );
+		<div>
+			<div className=" bg-blue-200">
+				<p>Temp navbar</p>
+				<Link href="/bookmarks">Bokmärken</Link>
+				<hr />
+				<Link href="/">Home</Link>
+				<hr />
+				<Link href="/sports">Sports</Link>
+				<hr />
+				<Link href="/entertainment">Entertainment</Link>
+			</div>
+			{article && (
+				<>
+					<img src={article.image_url} />
+					<h2>{article.title}</h2>
+					<p>{article.description}</p>
+				</>
+			)}
+		</div>
+	);
 }

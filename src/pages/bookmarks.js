@@ -12,35 +12,32 @@ const Bookmarks = () => {
   };
 
   return (
-    <div>
-      <div className=" bg-blue-200">
-        <p>Temp navbar</p>
-        <Link href="/">Home</Link>
-        <hr />
-        <Link href="/sports">Sports</Link>
-        <hr />
-        <Link href="/world">World</Link>
-      </div>
-      <h2>Bookmarks</h2>
+		<div>
+			<div className=" bg-blue-200">
+				<p>Temp navbar</p>
+				<Link href="/">Home</Link>
+				<hr />
+				<Link href="/sports">Sports</Link>
+				<hr />
+				<Link href="/entertainment">Entertainment</Link>
+			</div>
+			<h2>Bookmarks</h2>
 
-      <ul>
-        {/* // Add accordian and show description only on click */}
-        {bookmarks.list.map((article) => (
-          <li key={article.article_id}>
-            <h2 className="text-2xl">{article.title}</h2>
-            <p className="text-lg">{article.description}</p>
-            <button onClick={() => handleBookmarkToggle(article)}>
-              {bookmarks.list.some(
-                (bookmark) => bookmark.article_id === article.article_id
-              )
-                ? "Ta bort bokmärke"
-                : "Lägg till bokmärke"}
-            </button>
-          </li>
-        ))}
-      </ul>
-    </div>
-  );
+			<ul>
+				{/* // Add accordian and show description and image on click article.description och article.image_url  */}
+				{bookmarks.list.map((article) => (
+					<li key={article.article_id}>
+						<h2 className="text-2xl">{article.title}</h2>
+						<button onClick={() => handleBookmarkToggle(article)}>
+							{bookmarks.list.some((bookmark) => bookmark.article_id === article.article_id)
+								? "Ta bort bokmärke"
+								: "Lägg till bokmärke"}
+						</button>
+					</li>
+				))}
+			</ul>
+		</div>
+	);
 };
 
 export default Bookmarks;
