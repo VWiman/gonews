@@ -2,7 +2,16 @@ import React from "react";
 import { useDispatch, useSelector } from "react-redux";
 import fetchNews from "@/utils/fetchNews";
 import Link from "next/link";
+import DefaultImg from "/public/images/default.jpeg";
 import { toggleBookmark } from "@/store/bookmarkSlice";
+import {
+  FaUser,
+  FaCalendarAlt,
+  FaExternalLinkSquareAlt,
+  FaAngleDoubleRight,
+  FaStar,
+  FaRegStar,
+} from "react-icons/fa";
 
 // definiera en funktionell komponent Home, som tar emot nyhetsdata som en prop
 const Home = ({ news }) => {
@@ -19,34 +28,85 @@ const Home = ({ news }) => {
 
   // rendera nyhetsartiklarna
   return (
-    <div>
-      {" "}
-      <div className=" bg-blue-200">
-        <p>Temp navbar</p>
-        <Link href="/bookmarks">Bokmärken</Link>
-        <hr />
-        <Link href="/sports">Sports</Link>
-        <hr />
-        <Link href="/entertainment">Entertainment</Link>
+    <>
+      <div>
+        <h1>Latest News</h1>
+        <div className="gonews">
+          {news.map((article) => (
+            <>
+              <div key={article.article_id} className="newsblock">
+                <div className="newsimg">
+                  <img
+                    src={article.image_url || { DefaultImg }}
+                    alt={article.title}
+                    width={200}
+                  />
+                </div>
+                <div className="newsart">
+                  <div className="newscontent">
+                    <div>
+                      <h2>{article.title}</h2>
+                    </div>
+                    <div className="newsinfo">
+                      <div className="item">
+                        <FaUser />
+                        {article.creator}
+                      </div>
+                      <div className="item">
+                        <FaCalendarAlt /> {article.pubDate}
+                      </div>
+                      <div className="item">
+                        <FaExternalLinkSquareAlt />
+                        <Link href={article.link} target="_blank">
+                          link
+                        </Link>
+                      </div>
+                    </div>
+                    <div>
+                      <p>{article.description}</p>
+                    </div>
+                  </div>
+                  <div className="newslinks">
+                    <div>
+                      {/* Added some function for adding class in button when is added */}
+                      <button
+                        onClick={() => handleBookmarkToggle(article)}
+                        className={`button ${
+                          bookmarks.list.some(
+                            (bookmark) =>
+                              bookmark.article_id === article.article_id
+                          )
+                            ? "added"
+                            : ""
+                        }`}
+                      >
+                        {bookmarks.list.some(
+                          (bookmark) =>
+                            bookmark.article_id === article.article_id
+                        ) ? (
+                          <>
+                            <FaStar /> Remove bookmark
+                          </>
+                        ) : (
+                          <>
+                            <FaRegStar /> Add bookmark
+                          </>
+                        )}
+                      </button>
+                    </div>
+                    <div>
+                      <Link href={`/article/${article.article_id}`}>
+                        Read more <FaAngleDoubleRight />
+                      </Link>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </>
+          ))}
+        </div>
       </div>
-      <h1>Huvudnyheter</h1>
-      <ul>
-        {news.map((article) => (
-          <li key={article.article_id}>
-            <h2 className="text-2xl">{article.title}</h2>
-            <p className="text-lg">{article.description}</p>
-            <button onClick={() => handleBookmarkToggle(article)}>
-              {bookmarks.list.some(
-                (bookmark) => bookmark.article_id === article.article_id
-              )
-                ? "Ta bort bokmärke"
-                : "Lägg till bokmärke"}
-            </button>
-            <Link href={`/article/${article.article_id}`}>Läs mer</Link>
-          </li>
-        ))}
-      </ul>
-    </div>
+    </>
   );
 };
 
