@@ -30,12 +30,10 @@ const Home = ({ news }) => {
   );
   // rendera nyhetsartiklarna
   return (
-    <>
       <div>
         <h1>Entertainment News</h1>
         <div className="gonews">
           {filteredNews.map((article) => (
-            <>
               <div key={article.article_id} className="newsblock">
                 <div className="newsimg">
                   <img
@@ -106,11 +104,9 @@ const Home = ({ news }) => {
                   </div>
                 </div>
               </div>
-            </>
           ))}
         </div>
       </div>
-    </>
   );
 };
 

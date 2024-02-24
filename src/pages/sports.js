@@ -28,12 +28,10 @@ const Home = ({ news }) => {
   const filteredNews = news.filter((item) => item.category.includes("sports"));
   // rendera nyhetsartiklarna
   return (
-    <>
       <div>
         <h1>Sports News</h1>
         <div className="gonews">
           {filteredNews.map((article) => (
-            <>
               <div key={article.article_id} className="newsblock">
                 <div className="newsimg">
                   <img
@@ -104,11 +102,9 @@ const Home = ({ news }) => {
                   </div>
                 </div>
               </div>
-            </>
           ))}
         </div>
       </div>
-    </>
   );
 };
 
