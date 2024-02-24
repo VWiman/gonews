@@ -10,7 +10,7 @@
 
 html,
 body {
-  @apply dark:text-white text-slate-800 dark:bg-slate-900 bg-white;
+  @apply dark:text-white text-slate-800 dark:bg-slate-900 bg-white min-h-screen;
 }
 
 p {
