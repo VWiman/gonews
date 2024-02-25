@@ -30,13 +30,13 @@ const Home = ({ news }) => {
 					{news.map((article) => (
 						<div key={article.article_id} className="newsblock">
 							<div className="newsimg">
-								<img src={article.image_url ||  defaultImg } alt={article.title} width={200} />
+								<img src={article.image_url || defaultImg} alt={article.title} width={200} />
 							</div>
 							<div className="newsart">
 								<NewsContent link={article.link}>{article}</NewsContent>
 								<div className="newslinks">
 									<div>
-										{/* Added some function for adding class in button when is added */}
+										{/* Added some() function for adding class in button when is added */}
 										<button
 											onClick={() => handleBookmarkToggle(article)}
 											className={`button ${

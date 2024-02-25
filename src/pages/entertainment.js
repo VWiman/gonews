@@ -6,9 +6,9 @@ import { toggleBookmark } from "@/store/bookmarkSlice";
 import { FaAngleDoubleRight, FaStar, FaRegStar } from "react-icons/fa";
 import NewsContent from "@/components/NewsContent";
 
-// definiera en funktionell komponent Home, som tar emot nyhetsdata som en prop
-const Home = ({ news }) => {
-	const defaultImg = "/images/default.jpeg"
+// definiera en funktionell komponent Entertainment, som tar emot nyhetsdata som en prop
+const Entertainment = ({ news }) => {
+	const defaultImg = "/images/default.jpeg";
 	//hämta bokmärken från Redux-store och lagra dem i variabeln bookmarks
 	const bookmarks = useSelector((state) => state.bookmarks);
 
@@ -28,13 +28,13 @@ const Home = ({ news }) => {
 				{news.map((article) => (
 					<div key={article.article_id} className="newsblock">
 						<div className="newsimg">
-							<img src={article.image_url ||  defaultImg } alt={article.title} width={200} />
+							<img src={article.image_url || defaultImg} alt={article.title} width={200} />
 						</div>
 						<div className="newsart">
 							<NewsContent link={article.link}>{article}</NewsContent>
 							<div className="newslinks">
 								<div>
-									{/* Added some function for adding class in button when is added */}
+									{/* Added some() function for adding class in button when is added */}
 									<button
 										onClick={() => handleBookmarkToggle(article)}
 										className={`button ${
@@ -84,4 +84,4 @@ export async function getStaticProps() {
 	}
 }
 
-export default Home;
+export default Entertainment;
