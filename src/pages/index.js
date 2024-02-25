@@ -2,7 +2,6 @@ import React from "react";
 import { useDispatch, useSelector } from "react-redux";
 import fetchNews from "@/utils/fetchNews";
 import Link from "next/link";
-
 import { toggleBookmark } from "@/store/bookmarkSlice";
 import { FaAngleDoubleRight, FaStar, FaRegStar } from "react-icons/fa";
 import NewsContent from "@/components/NewsContent";

@@ -52,7 +52,7 @@ const Sports = ({ news }) => {
 									</button>
 								</div>
 								<div>
-									<Link href={`/${article.category}article/${article.article_id}`}>
+									<Link href={`/article/sports/${article.article_id}`}>
 										Read more <FaAngleDoubleRight />
 									</Link>
 								</div>
