@@ -7,7 +7,7 @@ import { FaAngleDoubleRight, FaStar, FaRegStar } from "react-icons/fa";
 import NewsContent from "@/components/NewsContent";
 
 // definiera en funktionell komponent Home, som tar emot nyhetsdata som en prop
-const Home = ({ news }) => {
+const Home = ({ news, topnews }) => {
 	const defaultImg = "/images/default.jpeg";
 	//hämta bokmärken från Redux-store och lagra dem i variabeln bookmarks
 	const bookmarks = useSelector((state) => state.bookmarks);
@@ -24,6 +24,14 @@ const Home = ({ news }) => {
 	return (
 		<>
 			<div>
+				
+				<h2>Top News</h2>
+				{topnews.map((article) => (
+					<div key={article.article_id} className="newsblock">
+						{article.title}
+					</div>
+				))}
+
 				<h1>Latest News</h1>
 				<div className="gonews">
 					{news.map((article) => (
@@ -71,12 +79,14 @@ const Home = ({ news }) => {
 export async function getStaticProps() {
 	const apiKey = process.env.API_KEY;
 	const options = `size=10&language=en`;
+	const topOptions = `size=3&language=en`;
 
 	try {
 		const news = await fetchNews(apiKey, options);
+		const topnews = await fetchNews(apiKey, topOptions);
 		console.log("Fetch was successful.");
 		return {
-			props: { news },
+			props: { news, topnews },
 		};
 	} catch (error) {
 		console.error("Error fetching news:", error);
