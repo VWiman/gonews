@@ -4,7 +4,8 @@ import fetchNews from "@/utils/fetchNews";
 import Link from "next/link";
 import DefaultImg from "/public/images/default.jpeg";
 import { toggleBookmark } from "@/store/bookmarkSlice";
-import { FaUser, FaCalendarAlt, FaExternalLinkSquareAlt, FaAngleDoubleRight, FaStar, FaRegStar } from "react-icons/fa";
+import { FaAngleDoubleRight, FaStar, FaRegStar } from "react-icons/fa";
+import NewsContent from "@/components/NewsContent";
 
 // definiera en funktionell komponent Home, som tar emot nyhetsdata som en prop
 const Home = ({ news }) => {
@@ -31,30 +32,7 @@ const Home = ({ news }) => {
 								<img src={article.image_url || { DefaultImg }} alt={article.title} width={200} />
 							</div>
 							<div className="newsart">
-								<div className="newscontent">
-									<div>
-										<h2>{article.title}</h2>
-									</div>
-									<div className="newsinfo">
-										<div className="item">
-											<FaUser />
-											{article.creator}
-										</div>
-										<div className="item">
-											<FaCalendarAlt />
-											{article.pubDate}
-										</div>
-										<div className="item">
-											<FaExternalLinkSquareAlt />
-											<Link href={article.link} target="_blank">
-												link
-											</Link>
-										</div>
-									</div>
-									<div>
-										<p>{article.description}</p>
-									</div>
-								</div>
+								<NewsContent link={article.link}>{article}</NewsContent>
 								<div className="newslinks">
 									<div>
 										{/* Added some function for adding class in button when is added */}
