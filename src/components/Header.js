@@ -38,9 +38,9 @@ const Header = () => {
         {/* Desktop navigation */}
         <nav className="hidden md:flex space-x-4">
           <Link href="/">Home</Link>
-          <Link href="/sports">Sport News</Link>
+          <Link href="/sports">Sports</Link>
           <Link href="/entertainment">Entertainment</Link>
-          <Link href="/bookmarks">Bokmärken</Link>
+          <Link href="/bookmarks">Bookmarks</Link>
         </nav>
 
         {/* Dark mode toggle */}
@@ -95,7 +95,7 @@ const Header = () => {
                   href="/sports"
                   className="hover:text-gray-300 text-white block"
                 >
-                  Sport News
+                  Sports
                 </Link>
               </li>
               <li className="mb-2">
@@ -103,7 +103,7 @@ const Header = () => {
                   href="/entertainment"
                   className="hover:text-gray-300 text-white block"
                 >
-                  Entertainment News
+                  Entertainment
                 </Link>
               </li>
               <li className="mb-2">
