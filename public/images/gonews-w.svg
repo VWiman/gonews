@@ -1,1 +1,40 @@
-<?xml version="1.0" encoding="UTF-8"?><svg id="uuid-de73369c-2bc5-42c4-adcd-608ef85f56cb" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 271.46 75.16"><g id="uuid-8ba30406-33ac-4363-854d-4ac16f012e46"><text transform="translate(0 51.82)" font-size="60"><tspan x="0" y="0" fill="#4285f4" font-family="Inter-ExtraBold, Inter" font-weight="700" letter-spacing="-.03em">G</tspan><tspan x="44.2" y="0" fill="#ea4335" font-family="Inter-ExtraBold, Inter" font-weight="700" letter-spacing="-.03em">o</tspan><tspan x="79.56" y="0" fill="#fff" font-family="NotoSerif-Black, &apos;Noto Serif&apos;" font-variation-settings="&apos;wght&apos; 900, &apos;wdth&apos; 100" font-weight="800" letter-spacing="-.02em">NEWS</tspan></text></g></svg>
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 220.63 123.86">
+  <defs>
+    <style>
+      .cls-1 {
+        letter-spacing: -.02em;
+      }
+
+      .cls-2 {
+        font-family: NotoSerif-Regular, 'Noto Serif';
+        font-size: 48px;
+      }
+
+      .cls-2, .cls-3 {
+        fill: #95c0d5;
+      }
+
+      .cls-3 {
+        stroke-width: 0px;
+      }
+    </style>
+  </defs>
+  <g id="Layer_1-2" data-name="Layer 1">
+    <g>
+      <text class="cls-2" transform="translate(0 79.09) scale(1.04 1)"><tspan x="0" y="0">GON</tspan><tspan class="cls-1" x="106.51" y="0">E</tspan><tspan x="135.45" y="0">WS</tspan></text>
+      <g>
+        <g>
+          <path class="cls-3" d="M80.21,82.88l64.75.14c-.11,13.14-10.09,34.15-32.25,40.84-22.06-6.4-33.39-28.14-32.5-40.97Z"/>
+          <path class="cls-3" d="M188.55,85.63c.12-.97,1.34-2.03-.25-2.73l-34.25.41c.68,12.01-6.71,26.31-18.5,36.47,27.22-3.83,51.12-18.8,53-34.15Z"/>
+          <path class="cls-3" d="M36.7,85.59c-.12-.97-1.34-2.03.25-2.73q17.13.2,34.25.41c-.68,12.01,6.71,26.31,18.5,36.47-27.22-3.83-51.12-18.8-53-34.15Z"/>
+        </g>
+        <g>
+          <path class="cls-3" d="M80.25,40.97l64.75-.14c-.11-13.14-10.09-34.15-32.25-40.84-22.06,6.4-33.39,28.14-32.5,40.97Z"/>
+          <path class="cls-3" d="M188.59,38.22c.12.97,1.34,2.03-.25,2.73l-34.25-.41c.68-12.01-6.71-26.31-18.5-36.47,27.22,3.83,51.12,18.8,53,34.15Z"/>
+          <path class="cls-3" d="M36.74,38.27c-.12.97-1.34,2.03.25,2.73q17.13-.2,34.25-.41c-.68-12.01,6.71-26.31,18.5-36.47-27.22,3.83-51.12,18.8-53,34.15Z"/>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>
