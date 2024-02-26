@@ -9,8 +9,8 @@ const Bookmarks = () => {
       <h2>Bookmarks</h2>
       <ul className=" space-y-4">
         {/* // Add accordian and show description and image on click article.description och article.image_url  */}
-        {bookmarks.list.map((article) => (
-          <AccordionItem article={article} />
+        {bookmarks.list.map((article, index) => (
+          <AccordionItem key={index + article.article_id} article={article} />
         ))}
       </ul>
     </div>
