@@ -83,6 +83,10 @@ h3 {
   @apply underline decoration-2 underline-offset-4 decoration-red-500;
 }
 
+button.backbutton {
+  @apply flex gap-1 items-center bg-slate-900 text-white dark:bg-white dark:text-black py-2 px-4;
+}
+
 /* mainpage left & right sides css */
 .maincontent {
   @apply flex flex-col md:flex-row gap-5;

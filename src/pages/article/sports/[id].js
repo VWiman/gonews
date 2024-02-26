@@ -1,3 +1,4 @@
+import BackButton from "@/components/BackButton";
 import fetchNews from "@/utils/fetchNews";
 import Link from "next/link";
 import { FaUser, FaCalendarAlt, FaExternalLinkSquareAlt } from "react-icons/fa";
@@ -95,6 +96,7 @@ export default function Article({ article }) {
               etiam tempor orci eu lobortis elementum.
             </p>
           </div>
+          <BackButton />
         </>
       )}
     </div>
