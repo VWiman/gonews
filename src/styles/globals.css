@@ -68,6 +68,21 @@ h3 {
   @apply flex flex-col gap-5 w-full;
 }
 
+/* Mobil menu nav */
+.mobilnav a {
+  @apply text-white;
+}
+.mobilnav a.current {
+  @apply underline decoration-2 underline-offset-4 decoration-red-500;
+}
+
+.desknav a {
+  @apply hover:underline decoration-2 underline-offset-4 decoration-red-500 hover:decoration-red-500  hover:transition hover:duration-300 hover:ease-in-out font-semibold;
+}
+.desknav a.current {
+  @apply underline decoration-2 underline-offset-4 decoration-red-500;
+}
+
 /* mainpage left & right sides css */
 .maincontent {
   @apply flex flex-col md:flex-row gap-5;
@@ -82,7 +97,7 @@ h3 {
   @apply bg-gray-50 dark:bg-slate-800 rounded-md mb-6 p-3;
 }
 .rightnewsblock ul li {
-  @apply mb-4 text-[14px] font-bold hover:text-blue-600 dark:hover:text-blue-400 border-l-2 border-red-500;
+  @apply mb-5 text-[14px] font-bold hover:text-blue-600 dark:hover:text-blue-400 border-l-2 border-red-500;
 }
 .rightnewsblock ul li a {
   @apply inline-block ml-[5px];
@@ -97,5 +112,5 @@ h3 {
   @apply fill-blue-600 dark:fill-blue-400;
 }
 .rightnewsblock h3 {
-  @apply bg-slate-800 dark:bg-slate-900 text-white py-1 px-3 mb-5 font-semibold text-base;
+  @apply bg-slate-800 dark:bg-slate-900 text-white py-2 px-3 mb-5 font-semibold text-base;
 }
