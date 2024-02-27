@@ -7,7 +7,7 @@ export default async function fetchNews(apiKey, options) {
 
 	const filteredResults = []
 
-	console.log("Results before filter:", results)
+	// console.log("Results before filter:", results)
 
 	results.forEach(result => {
 		if (filteredResults.some((item) => item.title.toLowerCase() === result.title.toLowerCase())) {
@@ -17,7 +17,7 @@ export default async function fetchNews(apiKey, options) {
 		}
 	});
 
-	console.log("Results after filter:", filteredResults);
+	// console.log("Results after filter:", filteredResults);
 
 	return filteredResults || [];
 }
